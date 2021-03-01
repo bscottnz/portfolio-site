@@ -2,13 +2,13 @@ import './sass/main.scss';
 import canvasDots from './heroCanvas.js';
 
 window.onload = function () {
-  // canvasDots();
+  canvasDots();
 };
 
 // loads in about section on scroll
 function aboutFadeIn(entries, observer) {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
+    if (entry.isIntersecting && document.body.scrollWidth > 1200) {
       // console.log('yo');
       // fade in bio
       document.querySelector('.profile').classList.add('profile__fade-in');

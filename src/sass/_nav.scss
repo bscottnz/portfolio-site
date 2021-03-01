@@ -6,6 +6,10 @@
   font-weight: 500;
   letter-spacing: 1px;
 
+  @media (max-width: 1200px) {
+    margin-right: 3rem;
+  }
+
   &-bar {
     position: sticky;
     position: -webkit-sticky;

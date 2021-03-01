@@ -61,6 +61,17 @@
 
     animation-duration: 1.4s;
     animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
+
+    @media (max-width: 700px) {
+      font-size: 5rem;
+      text-align: center;
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+
+    @media (max-width: 550px) {
+      font-size: 4rem;
+    }
   }
 
   &-cta {
@@ -86,6 +97,14 @@
     animation-fill-mode: backwards;
     animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
 
+    @media (max-width: 1500px) {
+      width: auto;
+    }
+
+    @media (max-width: 550px) {
+      font-size: 2rem;
+    }
+
     &:hover .heading__arrow {
       transform: rotate(90deg);
       margin-left: 14px;
@@ -107,6 +126,18 @@
       filter: blur(0);
       transform-origin: 50%;
       z-index: -1;
+
+      @media (max-width: 1500px) {
+        width: 27.8rem;
+      }
+
+      @media (max-width: 1200px) {
+        width: 28.5rem;
+      }
+
+      @media (max-width: 770px) {
+        border: 2px solid transparent;
+      }
     }
     &:hover {
       transform: translateY(-2px);

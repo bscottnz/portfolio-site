@@ -28,6 +28,11 @@
       top: 6.3rem;
 
       z-index: -1;
+
+      @media (max-width: 770px) {
+        // width: 14rem;
+        border-bottom: 14px solid $color-red;
+      }
     }
   }
 }
@@ -39,6 +44,7 @@
   display: flex;
   margin-bottom: 14rem;
   justify-content: flex-start;
+
   &__image {
     &-container {
       position: relative;
@@ -49,6 +55,36 @@
       background-color: $color-blue-dark;
       transition: all 0.2s;
       cursor: pointer;
+
+      @media (max-width: 1100px) {
+        height: 64rem;
+        width: 90rem;
+      }
+
+      @media (max-width: 970px) {
+        height: 58rem;
+        width: 80rem;
+      }
+
+      @media (max-width: 900px) {
+        height: 54rem;
+        width: 75rem;
+      }
+
+      @media (max-width: 700px) {
+        height: 48rem;
+        width: 64rem;
+      }
+
+      @media (max-width: 560px) {
+        height: 40rem;
+        width: 52rem;
+      }
+
+      @media (max-width: 440px) {
+        height: 30rem;
+        width: 39rem;
+      }
 
       &:hover {
         transform: scale(0.95);
@@ -77,6 +113,11 @@
     z-index: 66;
     font-size: 3.5rem;
     // font-weight: 700;
+
+    @media (max-width: 550px) {
+      font-size: 2.5rem;
+      background-color: rgba($color-background, 0.6);
+    }
   }
 
   &__live,
@@ -124,6 +165,23 @@
 
     &:hover:after {
       transform: scaleY(17.5);
+
+      @media (max-width: 1500px) {
+        transform: scaleY(16.5);
+      }
+
+      @media (max-width: 1200px) {
+        transform: scaleY(14);
+      }
+
+      @media (max-width: 770px) {
+        transform: scaleY(12.5);
+      }
+    }
+
+    @media (max-width: 550px) {
+      // font-size: 2.5rem;
+      background-color: rgba($color-background, 0.6);
     }
   }
 
@@ -139,6 +197,14 @@
     align-self: flex-start;
     margin-left: 22rem;
 
+    @media (max-width: 1700px) {
+      margin-left: 11rem;
+    }
+
+    @media (max-width: 1500px) {
+      margin-left: 0;
+    }
+
     & .project__info {
       left: -8rem;
     }
@@ -147,6 +213,14 @@
   &-right {
     align-self: flex-end;
     margin-right: 22rem;
+
+    @media (max-width: 1700px) {
+      margin-right: 11rem;
+    }
+
+    @media (max-width: 1500px) {
+      margin-right: 0;
+    }
 
     & .project__info {
       right: -8rem;

@@ -16,7 +16,7 @@ const canvasDots = function () {
   canvas.style.display = 'block';
   // ctx.fillStyle = colorDot;
   // ctx.fillStyle = 'hsl(' + 360 * Math.random() + ', 50%, 50%)';
-  ctx.lineWidth = 0.2;
+  ctx.lineWidth = 0.3;
   ctx.strokeStyle = color;
 
   let mousePosition = {

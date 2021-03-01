@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 
 $color-text: #fafafa;
-$color-red: rgb(255, 77, 90);
+$color-red: #ff4d5a;
 $color-background: rgb(26, 26, 26);
 $color-background-light: rgb(32, 32, 32);
 $color-blue: rgb(81, 162, 233);
@@ -22,6 +22,22 @@ html {
   font-size: 62.5%; // 1 rem = 10 px (browser default is 16)
 
   scroll-behavior: smooth;
+
+  @media (max-width: 1500px) {
+    font-size: 57.25%;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 50%;
+  }
+
+  @media (max-width: 770px) {
+    font-size: 43.75%;
+  }
+
+  @media (max-width: 615px) {
+    font-size: 40%;
+  }
 }
 
 body {

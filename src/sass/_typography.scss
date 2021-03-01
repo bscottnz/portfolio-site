@@ -9,4 +9,12 @@
   //   0 0 1px $color-background, 0 0 1px $color-background;
 
   z-index: 9999;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 10rem;
+  }
+
+  @media (max-width: 1000px) {
+    margin-top: 6rem;
+  }
 }

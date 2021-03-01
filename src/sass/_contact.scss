@@ -1,10 +1,25 @@
 .contact {
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
+  width: 500px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   margin-bottom: 12rem;
+
+  @media (max-width: 700px) {
+    width: 400px;
+  }
+
+  @media (max-width: 470px) {
+    width: 330px;
+  }
+
+  @media (max-width: 400px) {
+    width: 260px;
+  }
 
   &__heading {
     margin-top: -4rem !important;
@@ -21,6 +36,11 @@
       top: 6.3rem;
 
       z-index: -1;
+
+      @media (max-width: 770px) {
+        // width: 14rem;
+        border-bottom: 14px solid $color-red;
+      }
     }
   }
 
@@ -90,19 +110,43 @@
 
       &:hover:after {
         transform: scaleY(17.5);
+
+        @media (max-width: 1500px) {
+          transform: scaleY(16.5);
+        }
+
+        @media (max-width: 1200px) {
+          transform: scaleY(14);
+        }
+
+        @media (max-width: 770px) {
+          transform: scaleY(12.5);
+        }
       }
     }
   }
 
   & input,
   & textarea {
-    width: 50rem;
+    width: 500px;
     resize: none;
     border: none;
     color: inherit;
     background-color: $color-background-light;
     font-size: 1.6rem;
     font-family: monserrat, sans-serif;
+
+    @media (max-width: 700px) {
+      width: 400px;
+    }
+
+    @media (max-width: 470px) {
+      width: 330px;
+    }
+
+    @media (max-width: 400px) {
+      width: 260px;
+    }
 
     &:focus {
       outline: none;
