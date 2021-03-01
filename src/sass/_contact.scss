@@ -1,0 +1,126 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12rem;
+
+  &__heading {
+    margin-top: -4rem !important;
+    margin-bottom: 6rem !important;
+    &:before {
+      position: absolute;
+      content: '';
+      border-bottom: 18px solid $color-red;
+      width: 21rem;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      left: 3.5rem;
+      top: 6.3rem;
+
+      z-index: -1;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    margin-bottom: 6rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-name,
+    &-email {
+      margin-bottom: 6px;
+      padding: 1rem;
+      height: 4rem;
+    }
+
+    &-message {
+      height: 12rem;
+      padding: 1rem;
+    }
+
+    &-submit {
+      align-self: flex-end;
+      position: relative;
+      margin-top: 1.5rem;
+      padding: 0.6rem 1rem;
+      width: fit-content;
+
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 3px;
+      // border-bottom: 2px solid $color-red;
+      z-index: 9;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-background;
+        font-weight: 700;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        border-bottom: 2px solid $color-red;
+
+        width: calc(100% + 2rem);
+        // height: 100%;
+        left: -14%;
+        top: 0.5rem;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+
+        transform-origin: bottom;
+        transition: all 0.2s;
+
+        // left: -8rem;
+
+        z-index: -1;
+      }
+
+      &:hover:after {
+        transform: scaleY(17.5);
+      }
+    }
+  }
+
+  & input,
+  & textarea {
+    width: 50rem;
+    resize: none;
+    border: none;
+    color: inherit;
+    background-color: $color-background-light;
+    font-size: 1.6rem;
+    font-family: monserrat, sans-serif;
+
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: rgba($color-text, 0.6);
+      opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: rgba($color-text, 0.6);
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: rgba($color-text, 0.6);
+    }
+  }
+}

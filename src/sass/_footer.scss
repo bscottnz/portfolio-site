@@ -1,0 +1,84 @@
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 16rem;
+  background-color: $color-background-light;
+}
+
+.socials {
+  display: flex;
+  margin-bottom: 20px;
+  &__github,
+  &__email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 25px;
+    height: 35px;
+
+    background-color: transparent;
+    cursor: pointer;
+    // border: 2px solid $color-background;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__github {
+    margin-right: 1rem;
+  }
+  &__email {
+    margin-left: 1rem;
+  }
+
+  & img {
+    height: 100%;
+  }
+}
+
+.copyright {
+  color: $color-text;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.return-home {
+  position: absolute;
+  top: -25px;
+
+  width: 40px;
+  height: 45px;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  // transform: translateX(-50%);
+
+  background-color: $color-red;
+
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+
+  &:hover {
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+  }
+
+  & svg {
+    width: 100%;
+  }
+}

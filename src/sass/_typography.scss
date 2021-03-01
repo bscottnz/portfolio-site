@@ -1,0 +1,12 @@
+.section-heading {
+  position: relative;
+  font-size: 5.5rem;
+  font-weight: 700;
+  margin-top: 9rem;
+  margin-bottom: 13rem;
+
+  // text-shadow: 0 0 1px $color-background, 0 0 1px $color-background,
+  //   0 0 1px $color-background, 0 0 1px $color-background;
+
+  z-index: 9999;
+}

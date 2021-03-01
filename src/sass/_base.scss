@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+$color-text: #fafafa;
+$color-red: rgb(255, 77, 90);
+$color-background: rgb(26, 26, 26);
+$color-background-light: rgb(32, 32, 32);
+$color-blue: rgb(81, 162, 233);
+$color-blue-dark: rgb(50, 22, 187);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  font-size: 62.5%; // 1 rem = 10 px (browser default is 16)
+
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: $color-text;
+  font-family: montserrat, sans-serif;
+  background-color: $color-background;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
