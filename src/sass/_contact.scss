@@ -10,7 +10,7 @@
 
   z-index: 10;
 
-  margin-bottom: 12rem;
+  margin-bottom: 10rem;
 
   @media (max-width: 700px) {
     width: 400px;
@@ -176,6 +176,7 @@
 
 .contact__form-error-submit {
   margin-top: 1.5rem;
+  height: 7rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -183,7 +184,7 @@
 }
 
 .form-error {
-  // align-self: start;
+  align-self: start;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.5;
