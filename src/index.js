@@ -2,13 +2,13 @@ import './sass/main.scss';
 import canvasDots from './heroCanvas.js';
 
 window.onload = function () {
-  canvasDots();
+  // canvasDots();
 };
 
 // loads in about section on scroll
 function aboutFadeIn(entries, observer) {
   entries.forEach((entry) => {
-    if (entry.isIntersecting && document.body.scrollWidth > 1200) {
+    if (entry.isIntersecting && document.body.scrollWidth > 1300) {
       // console.log('yo');
       // fade in bio
       document.querySelector('.profile').classList.add('profile__fade-in');
@@ -18,75 +18,125 @@ function aboutFadeIn(entries, observer) {
         return new Promise((resolve) => setTimeout(resolve, milliseconds));
       };
 
-      //html
-      sleep(1000).then(() => {
-        document
-          .querySelector('.skills__item--html')
-          .classList.add('skills__item-fade-in');
-      });
+      // html
+      document
+        .querySelector('.skills__item--html')
+        .classList.add('skills__item-fade-in');
 
-      //webpack
-      sleep(1100).then(() => {
-        document
-          .querySelector('.skills__item--webpack')
-          .classList.add('skills__item-fade-in');
-      });
+      // webpack
+      document
+        .querySelector('.skills__item--webpack')
+        .classList.add('skills__item-fade-in');
 
-      //js
-      sleep(1200).then(() => {
-        document
-          .querySelector('.skills__item--js')
-          .classList.add('skills__item-fade-in');
-      });
+      // js
+      document
+        .querySelector('.skills__item--js')
+        .classList.add('skills__item-fade-in');
 
-      //git
-      sleep(1300).then(() => {
-        document
-          .querySelector('.skills__item--git')
-          .classList.add('skills__item-fade-in');
-      });
+      // git
+      document
+        .querySelector('.skills__item--git')
+        .classList.add('skills__item-fade-in');
 
-      //sass
-      sleep(1400).then(() => {
-        document
-          .querySelector('.skills__item--sass')
-          .classList.add('skills__item-fade-in');
-      });
+      // sass
+      document
+        .querySelector('.skills__item--sass')
+        .classList.add('skills__item-fade-in');
 
-      //node
-      sleep(1500).then(() => {
-        document
-          .querySelector('.skills__item--node')
-          .classList.add('skills__item-fade-in');
-      });
+      // npm
+      document
+        .querySelector('.skills__item--npm')
+        .classList.add('skills__item-fade-in');
 
-      //py
-      sleep(1600).then(() => {
-        document
-          .querySelector('.skills__item--python')
-          .classList.add('skills__item-fade-in');
-      });
+      // py
+      document
+        .querySelector('.skills__item--python')
+        .classList.add('skills__item-fade-in');
 
-      //react
-      sleep(1700).then(() => {
-        document
-          .querySelector('.skills__item--react')
-          .classList.add('skills__item-fade-in');
-      });
+      // react
+      document
+        .querySelector('.skills__item--react')
+        .classList.add('skills__item-fade-in');
 
-      //r
-      sleep(1800).then(() => {
-        document
-          .querySelector('.skills__item--r')
-          .classList.add('skills__item-fade-in');
-      });
+      // r
+      document
+        .querySelector('.skills__item--r')
+        .classList.add('skills__item-fade-in');
 
-      //css
-      sleep(1900).then(() => {
-        document
-          .querySelector('.skills__item--css')
-          .classList.add('skills__item-fade-in');
-      });
+      // css
+      document
+        .querySelector('.skills__item--css')
+        .classList.add('skills__item-fade-in');
+
+      // //html
+      // sleep(1000).then(() => {
+      //   document
+      //     .querySelector('.skills__item--html')
+      //     .classList.add('skills__item-fade-in');
+      // });
+
+      // //webpack
+      // sleep(1100).then(() => {
+      //   document
+      //     .querySelector('.skills__item--webpack')
+      //     .classList.add('skills__item-fade-in');
+      // });
+
+      // //js
+      // sleep(1200).then(() => {
+      //   document
+      //     .querySelector('.skills__item--js')
+      //     .classList.add('skills__item-fade-in');
+      // });
+
+      // //git
+      // sleep(1300).then(() => {
+      //   document
+      //     .querySelector('.skills__item--git')
+      //     .classList.add('skills__item-fade-in');
+      // });
+
+      // //sass
+      // sleep(1400).then(() => {
+      //   document
+      //     .querySelector('.skills__item--sass')
+      //     .classList.add('skills__item-fade-in');
+      // });
+
+      // //node
+      // sleep(1500).then(() => {
+      //   document
+      //     .querySelector('.skills__item--npm')
+      //     .classList.add('skills__item-fade-in');
+      // });
+
+      // //py
+      // sleep(1600).then(() => {
+      //   document
+      //     .querySelector('.skills__item--python')
+      //     .classList.add('skills__item-fade-in');
+      // });
+
+      // //react
+      // sleep(1700).then(() => {
+      //   document
+      //     .querySelector('.skills__item--react')
+      //     .classList.add('skills__item-fade-in');
+      // });
+
+      // //r
+      // sleep(1800).then(() => {
+      //   document
+      //     .querySelector('.skills__item--r')
+      //     .classList.add('skills__item-fade-in');
+      // });
+
+      // //css
+      // sleep(1900).then(() => {
+      //   document
+      //     .querySelector('.skills__item--css')
+      //     .classList.add('skills__item-fade-in');
+      // });
     }
   });
 }

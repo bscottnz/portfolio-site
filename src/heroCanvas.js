@@ -41,7 +41,7 @@ const canvasDots = function () {
       d_radius: 280,
       array: [],
     };
-  } else if (windowSize > 1100) {
+  } else if (windowSize > 1000) {
     dots = {
       nb: 500,
       distance: 55,
@@ -50,33 +50,51 @@ const canvasDots = function () {
     };
   } else if (windowSize > 800) {
     dots = {
-      nb: 450,
-      distance: 50,
-      d_radius: 220,
+      nb: 200,
+      distance: 0,
+      d_radius: 0,
       array: [],
     };
-  } else if (windowSize > 650) {
+  } else if (windowSize > 600) {
     dots = {
-      nb: 400,
-      distance: 50,
-      d_radius: 185,
-      array: [],
-    };
-  } else if (windowSize > 500) {
-    dots = {
-      nb: 325,
-      distance: 45,
-      d_radius: 170,
+      nb: 150,
+      distance: 0,
+      d_radius: 0,
       array: [],
     };
   } else {
     dots = {
-      nb: 270,
-      distance: 45,
-      d_radius: 140,
+      nb: 100,
+      distance: 0,
+      d_radius: 0,
       array: [],
     };
   }
+
+  // decided to turn off connecting dots under 1000px
+
+  // } else if (windowSize > 650) {
+  //   dots = {
+  //     nb: 400,
+  //     distance: 50,
+  //     d_radius: 185,
+  //     array: [],
+  //   };
+  // } else if (windowSize > 500) {
+  //   dots = {
+  //     nb: 325,
+  //     distance: 45,
+  //     d_radius: 170,
+  //     array: [],
+  //   };
+  // } else {
+  //   dots = {
+  //     nb: 270,
+  //     distance: 45,
+  //     d_radius: 140,
+  //     array: [],
+  //   };
+  // }
 
   function Dot() {
     this.x = Math.random() * canvas.width;
@@ -181,6 +199,12 @@ const canvasDots = function () {
       dot.create();
     }
 
+    // first dot to be relativley large
+    dots.array[0].radius = 1.5;
+
+    // first dot to be blue
+    dots.array[0].colour = '#51a2e9';
+
     dot.line();
     dot.animate();
   }
@@ -189,15 +213,14 @@ const canvasDots = function () {
     mousePosition.x = parameter.pageX;
     mousePosition.y = parameter.pageY;
 
-    // want the first dot to follow the mouse
-    dots.array[0].x = parameter.pageX;
-    dots.array[0].y = parameter.pageY;
-
-    // first dot to be relativley large
-    dots.array[0].radius = parameter = 1.5;
-
-    // first dot to be blue
-    dots.array[0].colour = '#51a2e9';
+    // sometimes if the mouse is off screen on refresh, it bugs out
+    try {
+      // want the first dot to follow the mouse
+      dots.array[0].x = parameter.pageX;
+      dots.array[0].y = parameter.pageY;
+    } catch {
+      //
+    }
   };
 
   mousePosition.x = window.innerWidth / 2;

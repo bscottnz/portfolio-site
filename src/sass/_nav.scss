@@ -10,6 +10,10 @@
     margin-right: 3rem;
   }
 
+  @media (max-width: 700px) {
+    margin-right: 0;
+  }
+
   &-bar {
     position: sticky;
     position: -webkit-sticky;
@@ -24,6 +28,10 @@
     box-shadow: 0 7px 7px rgba(0, 0, 0, 0.4);
 
     z-index: 99999999999;
+
+    @media (max-width: 700px) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -34,9 +42,11 @@
 
     &--active {
       color: $color-red;
+      font-weight: 600;
     }
     &:hover {
       color: $color-red;
+      font-weight: 600;
     }
   }
 }

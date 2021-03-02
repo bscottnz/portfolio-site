@@ -4,7 +4,7 @@
 $color-text: #fafafa;
 $color-red: #ff4d5a;
 $color-background: rgb(26, 26, 26);
-$color-background-light: rgb(32, 32, 32);
+$color-background-light: rgb(40, 40, 40);
 $color-blue: rgb(81, 162, 233);
 $color-blue-dark: rgb(50, 22, 187);
 
@@ -37,6 +37,10 @@ html {
 
   @media (max-width: 615px) {
     font-size: 40%;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 35%;
   }
 }
 
