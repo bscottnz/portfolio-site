@@ -41,7 +41,7 @@ const canvasDots = function () {
       d_radius: 280,
       array: [],
     };
-  } else if (windowSize > 1000) {
+  } else if (windowSize > 1100) {
     dots = {
       nb: 500,
       distance: 55,
@@ -50,14 +50,14 @@ const canvasDots = function () {
     };
   } else if (windowSize > 800) {
     dots = {
-      nb: 200,
+      nb: 300,
       distance: 0,
       d_radius: 0,
       array: [],
     };
   } else if (windowSize > 600) {
     dots = {
-      nb: 150,
+      nb: 200,
       distance: 0,
       d_radius: 0,
       array: [],
@@ -71,7 +71,7 @@ const canvasDots = function () {
     };
   }
 
-  // decided to turn off connecting dots under 1000px
+  // decided to turn off connecting dots under 1100px
 
   // } else if (windowSize > 650) {
   //   dots = {
