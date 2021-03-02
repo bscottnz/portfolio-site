@@ -71,9 +71,9 @@
     }
 
     &-submit {
-      align-self: flex-end;
+      align-self: flex-start;
       position: relative;
-      margin-top: 1.5rem;
+      // margin-top: 1.5rem;
       padding: 0.6rem 1rem;
       width: fit-content;
 
@@ -139,6 +139,8 @@
     font-size: 1.6rem;
     font-family: monserrat, sans-serif;
 
+    border-left: 2px solid transparent;
+
     @media (max-width: 700px) {
       width: 400px;
     }
@@ -170,4 +172,28 @@
       color: rgba($color-text, 0.6);
     }
   }
+}
+
+.contact__form-error-submit {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-error {
+  // align-self: start;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+
+  // all form error messages
+  & > * {
+    display: none;
+  }
+}
+
+.input-error {
+  border-left: 2px solid $color-red !important;
 }

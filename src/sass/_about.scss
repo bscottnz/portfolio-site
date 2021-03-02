@@ -142,8 +142,9 @@
     opacity: 0;
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 100px;
     width: 160px;
 
@@ -167,12 +168,12 @@
 
     @media (max-width: 1300px) {
       opacity: 1;
+      border-width: 2px;
     }
 
     @media (max-width: 1000px) {
       height: 80px;
       width: 130px;
-      border-width: 2px;
     }
 
     @media (max-width: 600px) {
@@ -209,11 +210,15 @@
     }
 
     & img {
-      position: relative;
-      top: -0.8rem;
+      // position: relative;
+      // top: -0.8rem;
       height: 60px;
       width: auto;
       transition: all 0.2s;
+
+      @media (max-width: 1500px) {
+        height: 55px;
+      }
 
       @media (max-width: 1000px) {
         height: 50px;
@@ -233,14 +238,19 @@
     }
 
     &-name {
-      position: absolute;
-      bottom: 0.5rem;
+      // position: absolute;
+      // bottom: 0.5rem;
       font-size: 1.2rem;
       font-weight: 600;
+      line-height: 1;
       // opacity: 0;
 
       transition: all 0.2s;
       letter-spacing: 1px;
+
+      @media (max-width: 1200px) {
+        font-size: 1.4rem;
+      }
     }
 
     // &:hover {

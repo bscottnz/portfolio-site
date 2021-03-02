@@ -231,6 +231,7 @@ const canvasDots = function () {
   window.onresize = function () {
     clearInterval(draw);
     canvasDots();
+    // console.log(yippe);
   };
 };
 

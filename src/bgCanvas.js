@@ -254,6 +254,8 @@ const canvasDotsBg = function () {
   window.onresize = function () {
     clearInterval(draw);
     canvasDotsBg();
+
+    // console.log('yoza');
   };
 };
 

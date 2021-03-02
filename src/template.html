@@ -259,7 +259,7 @@
           type="text"
           name="name"
           placeholder="Name"
-          required
+          
         />
 
         <input
@@ -267,18 +267,26 @@
           type="email"
           name="_replyto"
           placeholder="Email"
-          required
+          
         />
 
         <textarea
           class="contact__form-message"
           name="message"
           placeholder="Message"
-          required
+          
         ></textarea>
 
-        <button type="submit" class="contact__form-submit">Submit</button>
+        <div class="contact__form-error-submit">
+        	<div class="form-error">
+        	  <div class="form-error__name">Please enter your name.</div>
+        	  <div class="form-error__email">Please enter a valid email.</div>
+        	  <div class="form-error__msg">Please enter a message.</div>
+        	</div>
+        	<button type="button" class="contact__form-submit" >Submit</button>
+        </div>
       </form>
+      
     </section>
     <footer class="footer">
       <a href="#hero">
