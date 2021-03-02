@@ -141,6 +141,8 @@
 
     border-left: 2px solid transparent;
 
+    border-radius: 0;
+
     @media (max-width: 700px) {
       width: 400px;
     }
