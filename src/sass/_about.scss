@@ -51,7 +51,7 @@
     justify-content: space-between;
     width: 100%;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1300px) {
       flex-direction: column;
     }
   }
@@ -67,18 +67,18 @@
   // background-color: $color-blue-dark;
   font-weight: 500;
 
-  // left: -300px;
-  // opacity: 0;
-  // transition: all 1.1s;
+  left: -300px;
+  opacity: 0;
+  transition: all 1.1s;
 
   // no fade in on small screen
-  // @media (max-width: 1301px) {
-  //   margin-bottom: 10rem;
-  //   left: 0;
-  //   opacity: 1;
-  // }
+  @media (max-width: 1301px) {
+    margin-bottom: 10rem;
+    left: 0;
+    opacity: 1;
+  }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     margin-bottom: 7rem;
   }
 
@@ -108,13 +108,12 @@
   }
 
   &__fade-in {
-    // opacity: 1;
-    // transform: translateX(300px);
+    opacity: 1;
+    transform: translateX(300px);
 
-    animation-name: moveInLeft;
-
-    animation-duration: 1.9s;
-    animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
+    @media (max-width: 1300px) {
+      transform: translateX(0);
+    }
   }
 }
 
@@ -140,7 +139,7 @@
     }
   }
   &__item {
-    opacity: 1;
+    opacity: 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -258,9 +257,7 @@
     // }
 
     &-fade-in {
-      animation: fadeIn 1s 1.4s;
-      animation-fill-mode: backwards;
-      // animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
+      opacity: 1;
     }
 
     &--js img {
