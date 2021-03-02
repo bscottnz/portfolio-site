@@ -1,4 +1,5 @@
 .contact {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -6,6 +7,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  z-index: 10;
 
   margin-bottom: 12rem;
 

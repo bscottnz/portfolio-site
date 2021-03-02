@@ -1,8 +1,10 @@
 import './sass/main.scss';
 import canvasDots from './heroCanvas.js';
+import canvasDotsBg from './bgCanvas.js';
 
 window.onload = function () {
-  // canvasDots();
+  canvasDotsBg();
+  canvasDots();
 };
 
 // loads in about section on scroll
@@ -153,3 +155,15 @@ observerNav.observe(document.querySelector('#contact'));
 let observerNavProjects = new IntersectionObserver(navFadeInProjects, options2);
 
 observerNavProjects.observe(document.querySelector('#projects'));
+
+// parralax scrolling effect on hero canvas
+
+// window.onscroll = function (e) {
+//   console.log(document.scrollTop);
+// };
+
+// document.addEventListener('scroll', () => {
+//   // console.log(window.scrollY);
+
+//   document.querySelector('.connecting-dots').style.top = `${window.scrollY}px`;
+// });
