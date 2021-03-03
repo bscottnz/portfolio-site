@@ -179,6 +179,54 @@
     }
   }
 
+  &__live-2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    padding: 0.8rem 1rem;
+
+    position: relative;
+    margin-top: 3rem;
+
+    @media (max-width: 560px) {
+      margin-top: 2rem;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      height: 2px;
+      background-color: $color-red;
+
+      width: 100%;
+      bottom: 0;
+      display: block;
+      // margin: 0 auto;
+
+      transform-origin: bottom;
+      transition: all 0.25s;
+
+      // left: -8rem;
+
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $color-background;
+    }
+
+    &:hover:after {
+      height: 100%;
+    }
+  }
+
   &__live,
   &__code {
     position: relative;
