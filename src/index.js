@@ -172,66 +172,64 @@ observerNavProjects.observe(document.querySelector('#projects'));
 // form validation
 
 const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-document
-  .querySelector('.contact__form-submit')
-  .addEventListener('click', () => {
-    const unameInput = document.querySelector('.contact__form-name');
-    const emailInput = document.querySelector('.contact__form-email');
-    const msgInput = document.querySelector('.contact__form-message');
+document.querySelector('#form-submit').addEventListener('click', () => {
+  const unameInput = document.querySelector('.contact__form-name');
+  const emailInput = document.querySelector('.contact__form-email');
+  const msgInput = document.querySelector('.contact__form-message');
 
-    const uname = unameInput.value;
-    const email = emailInput.value;
-    const msg = msgInput.value;
+  const uname = unameInput.value;
+  const email = emailInput.value;
+  const msg = msgInput.value;
 
-    const unameError = document.querySelector('.form-error__name');
-    const emailError = document.querySelector('.form-error__email');
-    const msgError = document.querySelector('.form-error__msg');
+  const unameError = document.querySelector('.form-error__name');
+  const emailError = document.querySelector('.form-error__email');
+  const msgError = document.querySelector('.form-error__msg');
 
-    let validUname = false;
-    let validEmail = false;
-    let validMsg = false;
+  let validUname = false;
+  let validEmail = false;
+  let validMsg = false;
 
-    // console.log(uname, email, msg);
-    if (!uname) {
-      validUname = false;
-      unameInput.classList.add('input-error');
-      unameError.style.display = 'block';
-    } else {
-      validUname = true;
-      unameInput.classList.remove('input-error');
-      unameError.style.display = 'none';
-    }
+  // console.log(uname, email, msg);
+  if (!uname) {
+    validUname = false;
+    unameInput.classList.add('input-error');
+    unameError.style.display = 'block';
+  } else {
+    validUname = true;
+    unameInput.classList.remove('input-error');
+    unameError.style.display = 'none';
+  }
 
-    if (!email.match(re)) {
-      validEmail = false;
-      emailInput.classList.add('input-error');
-      emailError.style.display = 'block';
-    } else {
-      validEmail = true;
-      emailInput.classList.remove('input-error');
-      emailError.style.display = 'none';
-    }
+  if (!email.match(re)) {
+    validEmail = false;
+    emailInput.classList.add('input-error');
+    emailError.style.display = 'block';
+  } else {
+    validEmail = true;
+    emailInput.classList.remove('input-error');
+    emailError.style.display = 'none';
+  }
 
-    if (!msg) {
-      validMsg = false;
-      msgInput.classList.add('input-error');
-      msgError.style.display = 'block';
-    } else {
-      validMsg = true;
-      msgInput.classList.remove('input-error');
-      msgError.style.display = 'none';
-    }
+  if (!msg) {
+    validMsg = false;
+    msgInput.classList.add('input-error');
+    msgError.style.display = 'block';
+  } else {
+    validMsg = true;
+    msgInput.classList.remove('input-error');
+    msgError.style.display = 'none';
+  }
 
-    if (validUname && validEmail && validMsg) {
-      document.querySelector('.contact__form').submit();
+  if (validUname && validEmail && validMsg) {
+    document.querySelector('.contact__form').submit();
 
-      // clear form after a delay
-      const sleep = (milliseconds) => {
-        return new Promise((resolve) => setTimeout(resolve, milliseconds));
-      };
+    // clear form after a delay
+    const sleep = (milliseconds) => {
+      return new Promise((resolve) => setTimeout(resolve, milliseconds));
+    };
 
-      sleep(1500).then(() => {
-        document.querySelector('.contact__form').reset();
-      });
-    }
-  });
+    sleep(1500).then(() => {
+      document.querySelector('.contact__form').reset();
+    });
+  }
+});

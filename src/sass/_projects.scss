@@ -179,10 +179,12 @@
     }
   }
 
+  // new button styling that works on higher dpi screen
   &__live-2 {
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: 3px;
+    line-height: 1;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
@@ -190,7 +192,7 @@
     align-items: center;
 
     width: fit-content;
-    padding: 0.8rem 1rem;
+    padding: 1rem 1.2rem;
 
     position: relative;
     margin-top: 3rem;
@@ -206,7 +208,7 @@
       background-color: $color-red;
 
       width: 100%;
-      bottom: 0;
+      bottom: 1px;
       display: block;
       // margin: 0 auto;
 
