@@ -197,6 +197,8 @@
     position: relative;
     margin-top: 3rem;
 
+    cursor: pointer;
+
     @media (max-width: 560px) {
       margin-top: 2rem;
     }
