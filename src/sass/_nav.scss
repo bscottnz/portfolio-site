@@ -23,9 +23,10 @@
     align-items: center;
     height: 6rem;
     border-bottom: 1px solid $color-background;
-    background-color: $color-background-light;
+    background-color: rgba($color-background-light, 0.95);
+    backdrop-filter: blur(8px);
 
-    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 
     z-index: 99999999999;
 
